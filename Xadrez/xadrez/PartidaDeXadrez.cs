@@ -149,7 +149,7 @@ namespace xadrez
             // #jogadaespecial promocao
             if (p is Peao)
             {
-                if ((p.cor == Cor.Branca && destino.linha == 0) || (p.cor == Cor.Preta && destino.linha == 7))
+                if ((p.cor == Cor.Branca && destino.linha == 0) || (p.cor == Cor.Amarela && destino.linha == 7))
                 {
                     p = tab.retirarPeca(destino);
                     pecas.Remove(p);
@@ -218,7 +218,7 @@ namespace xadrez
         {
             if (jogadorAtual == Cor.Branca)
             {
-                jogadorAtual = Cor.Preta;
+                jogadorAtual = Cor.Amarela;
             }
             else
             {
@@ -257,7 +257,7 @@ namespace xadrez
         {
             if (cor == Cor.Branca)
             {
-                return Cor.Preta;
+                return Cor.Amarela;
             }
             else
             {
@@ -351,22 +351,22 @@ namespace xadrez
             colocarNovaPeca('g', 2, new Peao(tab, Cor.Branca, this));
             colocarNovaPeca('h', 2, new Peao(tab, Cor.Branca, this));
 
-            colocarNovaPeca('a', 8, new Torre(tab, Cor.Preta));
-            colocarNovaPeca('b', 8, new Cavalo(tab, Cor.Preta));
-            colocarNovaPeca('c', 8, new Bispo(tab, Cor.Preta));
-            colocarNovaPeca('d', 8, new Dama(tab, Cor.Preta));
-            colocarNovaPeca('e', 8, new Rei(tab, Cor.Preta, this));
-            colocarNovaPeca('f', 8, new Bispo(tab, Cor.Preta));
-            colocarNovaPeca('g', 8, new Cavalo(tab, Cor.Preta));
-            colocarNovaPeca('h', 8, new Torre(tab, Cor.Preta));
-            colocarNovaPeca('a', 7, new Peao(tab, Cor.Preta, this));
-            colocarNovaPeca('b', 7, new Peao(tab, Cor.Preta, this));
-            colocarNovaPeca('c', 7, new Peao(tab, Cor.Preta, this));
-            colocarNovaPeca('d', 7, new Peao(tab, Cor.Preta, this));
-            colocarNovaPeca('e', 7, new Peao(tab, Cor.Preta, this));
-            colocarNovaPeca('f', 7, new Peao(tab, Cor.Preta, this));
-            colocarNovaPeca('g', 7, new Peao(tab, Cor.Preta, this));
-            colocarNovaPeca('h', 7, new Peao(tab, Cor.Preta, this));
+            colocarNovaPeca('a', 8, new Torre(tab, Cor.Amarela));
+            colocarNovaPeca('b', 8, new Cavalo(tab, Cor.Amarela));
+            colocarNovaPeca('c', 8, new Bispo(tab, Cor.Amarela));
+            colocarNovaPeca('d', 8, new Dama(tab, Cor.Amarela));
+            colocarNovaPeca('e', 8, new Rei(tab, Cor.Amarela, this));
+            colocarNovaPeca('f', 8, new Bispo(tab, Cor.Amarela));
+            colocarNovaPeca('g', 8, new Cavalo(tab, Cor.Amarela));
+            colocarNovaPeca('h', 8, new Torre(tab, Cor.Amarela));
+            colocarNovaPeca('a', 7, new Peao(tab, Cor.Amarela, this));
+            colocarNovaPeca('b', 7, new Peao(tab, Cor.Amarela, this));
+            colocarNovaPeca('c', 7, new Peao(tab, Cor.Amarela, this));
+            colocarNovaPeca('d', 7, new Peao(tab, Cor.Amarela, this));
+            colocarNovaPeca('e', 7, new Peao(tab, Cor.Amarela, this));
+            colocarNovaPeca('f', 7, new Peao(tab, Cor.Amarela, this));
+            colocarNovaPeca('g', 7, new Peao(tab, Cor.Amarela, this));
+            colocarNovaPeca('h', 7, new Peao(tab, Cor.Amarela, this));
         }
     }
 }
